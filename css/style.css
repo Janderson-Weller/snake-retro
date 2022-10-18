@@ -1,14 +1,26 @@
+/* 
+:root {
+    --elementWidth: calc(1rem);
+} */
+
 * {
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
+    list-style: none;
+    border: none;
+    color: #fff;
+    /* box-sizing: border-box; */
 }
 
-body {
+body, .menu, .menu-list, .panel-score, .container-snake, .credits, .score, .world, #footer {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+body {
     height: 100vh;
+    flex-direction: column;
 }
 
 .container-main {
@@ -20,10 +32,35 @@ body {
     background-color: #252323;
 }
 
-.panel-score, .container-snake, .credits, .score, .world {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.menu {
+    display: none;
+    width: 25rem;
+    height: 15rem;
+    position: absolute;
+    z-index: 1;
+    background-color: #1B98E0;
+}
+
+.menu-list {
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+button {
+    padding: .5rem 1rem;
+    border-radius: .4rem;
+    background-color: #13293D;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.game-over {
+    display: none;
+    font-size: 2rem;
+    height: 5rem;
 }
 
 .panel-score {
@@ -34,15 +71,15 @@ body {
 }
 
 .credits, .score, .world {
-    color: #fff;
     justify-content: space-between;
     width: 5rem;
 }
 
 .container-snake {
-    width: 608px;
-    height: 80vh;
+    width: 38rem; /* 608 px */
+    height: 25rem; /* 400 px */
     background-color: #13293D;
+    border: 4px solid #13293D;
 }
 
 .head-snake, .food, .body-snake-plus {
@@ -53,20 +90,27 @@ body {
 }
 
 .head-snake {
-    /* margin-right: 584px; */
     opacity: 0;
     animation: head-animation .5s infinite;
 }
 
 .body-snake-plus {
     display: none;
-    background-color: rgb(50, 33, 66);
-    border: .2px solid white;
+    background-color: #322142;
+    border: .2px solid #ffffff;
 }
 
 .food {
     margin-right: 30%;
     background-color: yellow;
+}
+
+#footer {
+    display: none;
+    text-align: center;
+    background-color: #252323;
+    width: 100%;
+    height: 100%;
 }
 
 @keyframes head-animation {

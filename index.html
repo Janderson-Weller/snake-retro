@@ -4,21 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/snake-retro/css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
     <title>Snake Retro</title>
 </head>
 <body>
     <main class="container-main">
+        <section class="menu">
+            <nav class="nav-menu">
+                <ul class="menu-list">
+                    <li class="game-over show"><h2>GAME OVER</h2></li>
+                    <li><button class="continue hide">Continuar</button></li>
+                    <li><button class="exit show">Sair</button></li>
+                </ul>
+            </nav>
+        </section>
         <section class="panel-score">
-            <div class="credits">Credits<span>05</span></div>
-            <div class="score">Score<span>0</span></div>
-            <div class="world">World<span>1</span></div>
+            <div class="credits">Credits:<span>02</span></div>
+            <div class="score">Score:<span>0</span></div>
+            <div class="world">World:<span>1</span></div>
         </section>
         <section class="container-snake">
             <div class="head-snake"></div>
             <div class="food"></div>
         </section>
     </main>
+    <footer id="footer">
+        <div class="info-end-game">
+            <h2>Até a Próxima</h2>
+            <span>Desenvolvido por <strong><a href="https://www.linkedin.com/in/janderson-weller/">Janderson Weller</a></strong></span>
+        </div>
+    </footer>
     <script src="./js/script.js"></script>
 </body>
 </html>
