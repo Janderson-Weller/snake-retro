@@ -6,6 +6,9 @@ const world = document.querySelector('.world');
 
 const step       = 16;
 const alterWorld = 3;
+const widthScreen = 600;
+const heigthScreen = 350;
+
 let snakeSize    = 1;
 let keyA         = 'ArrowRight';
 let positive     = false;
@@ -39,8 +42,8 @@ const insertBody = () => {
 
 const insertFood = () => {
     // Math.floor(Math.random() * (max - min + 1) ) + min;
-    food.style.marginRight = `${Math.floor(Math.floor((Math.random() * (600 - (-600) + 1) + (-600)) / step) * step)}px`;
-    food.style.marginTop   = `${Math.floor(Math.floor((Math.random() * (300 - (-300) + 1) + (-300)) / step) * step)}px`;
+    food.style.marginRight = `${Math.floor(Math.floor((Math.random() * (widthScreen - (-widthScreen) + 1) + (-widthScreen)) / step) * step)}px`;
+    food.style.marginTop   = `${Math.floor(Math.floor((Math.random() * (heigthScreen - (-heigthScreen) + 1) + (-heigthScreen)) / step) * step)}px`;
 }
 
 const removeFood = () => {
